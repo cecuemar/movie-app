@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Router, ActivatedRoute } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 @Component({
     selector: 'app-detail',
     templateUrl: './detailmovie.component.html',
@@ -9,6 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class detailComponent{
 
   movie: any;
+  ratings: any;
   
   constructor(private route: ActivatedRoute) { }
 
@@ -16,6 +17,7 @@ export class detailComponent{
     this.route.params.subscribe(params => {
         const imdbID :string = params['filmID']    
         this.detailMovie(imdbID);
+        
     })
   }
 
@@ -24,6 +26,7 @@ export class detailComponent{
     .then(response => response.json())
       .then(data => {
       this.movie = data
+      this.ratings = this.movie.Ratings;
       console.log(this.movie.Title);
     }).catch(err => {
       console.log(err);

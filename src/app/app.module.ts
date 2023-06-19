@@ -6,17 +6,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header-movie/header.component';
 import { listMovieComponent } from './components/list-movie/listmovie.component';
+import { CommonModule } from '@angular/common';
+import { detailComponent } from './components/detail-movie/detailmovie.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    listMovieComponent
+    listMovieComponent,
+    detailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -23,13 +23,18 @@ export class listMovieComponent{
         fetch('https://www.omdbapi.com/?s='+ (movieName) +'&apikey=b4b60d19')
         .then(response => response.json())
           .then(data => {
-          this.movieList = data.Search;
+            if(data.Response == "True"){
+              this.movieList = data.Search;
+            } else {
+              this.movieList = [];
+              alert(404 + " Not Found, Please Try Again");
+            }
         }).catch(err => {
           console.log(err);
         });
       }
       getDetail(imdbID: string){
-        this.showDetail = true;
+        
         this.router.navigate(['/detail', imdbID]);
       }
 }
