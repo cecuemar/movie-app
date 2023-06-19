@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
-import { detailComponent } from './components/detailmovie.component';
+import { detailComponent } from './components/detail-movie/detailmovie.component';
 
 const routes: Routes = [
-  {path: '', component: AppComponent},
+  //{path: '', pathMatch: 'full', component: AppComponent},
   {path: 'detail/:filmID', component: detailComponent}]
 
 @NgModule({
