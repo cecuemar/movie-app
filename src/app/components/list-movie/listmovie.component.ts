@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
-import { environment } from "src/enviroments/enviroments";
+import { environment } from "src/environments/environments";
 
 @Component({
     selector: 'app-list-movie',

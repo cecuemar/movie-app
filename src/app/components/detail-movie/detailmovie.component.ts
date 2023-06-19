@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { ActivatedRoute } from '@angular/router';
-import { environment } from "src/enviroments/enviroments";
+import { environment } from "src/environments/environments";
 @Component({
     selector: 'app-detail',
     templateUrl: './detailmovie.component.html',
