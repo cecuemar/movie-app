@@ -6,6 +6,11 @@
 /out-tsc
 /bazel-out
 
+#Api-Key
+
+/src/environments/api-key.ts
+/src/environments/api-key.prod.ts
+
 # Node
 /node_modules
 npm-debug.log

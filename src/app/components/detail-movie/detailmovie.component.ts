@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { ActivatedRoute } from '@angular/router';
+import { environment } from "src/enviroments/enviroments";
 @Component({
     selector: 'app-detail',
     templateUrl: './detailmovie.component.html',
@@ -22,7 +23,7 @@ export class detailComponent{
   }
 
   detailMovie(imdbID: string){
-    fetch('https://www.omdbapi.com/?i='+ (imdbID) +'&apikey=b4b60d19')
+    fetch('https://www.omdbapi.com/?i='+ (imdbID) +'&apikey='+environment.apiKey+'')
     .then(response => response.json())
       .then(data => {
       this.movie = data

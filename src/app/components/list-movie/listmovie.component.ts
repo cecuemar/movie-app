@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
+import { environment } from "src/enviroments/enviroments";
 
 @Component({
     selector: 'app-list-movie',
@@ -20,7 +21,7 @@ export class listMovieComponent{
     }
 
     searchMovie(movieName: string){
-        fetch('https://www.omdbapi.com/?s='+ (movieName) +'&apikey=b4b60d19')
+        fetch('https://www.omdbapi.com/?s='+ (movieName) +'&apikey='+environment.apiKey+'')
         .then(response => response.json())
           .then(data => {
             if(data.Response == "True"){
