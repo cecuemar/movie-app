@@ -4,7 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Its a simple app to search movies and see the details of each one.
 Its deployed on [Netlify](https://wikimovie-carlosedgar.netlify.app).
-wikimovie-carlosedgar.netlify.app
+
+[wikimovie-carlosedgar.netlify.app]
 
 ## Performance
 ![Performance](/performance.jpeg)
