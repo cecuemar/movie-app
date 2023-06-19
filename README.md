@@ -1,27 +1,37 @@
-# MovieApp
+# WikiMovie
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
 
-## Development server
+Its a simple app to search movies and see the details of each one.
+Its deployed on [Netlify](https://wikimovie-carlosedgar.netlify.app).
+wikimovie-carlosedgar.netlify.app
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Performance
+![Performance](/performance.jpeg)
+## Dependencies
 
-## Code scaffolding
+For styling, I used [Tailwindcss](https://tailwindcss.com/).
+Title Font: Bagel Fat One
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How I Made it
 
-## Build
+First of all, i did a simple APi(i choosed The Open Movie DataBase) call to get the movies list(/mocks/response.json), and then i created a service to get the movies list and the movie details.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+After that, i created a component to show the movies list, then i created a component to show the movie details.
+I decide to create a header component to show the logo and a way to go back to the movie search(this component is always visible).
 
-## Running unit tests
+As i did before, i did another API call to get movie details. 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+I manage the routing to show the movie details when you click on a movie Poster from the list.
 
-## Running end-to-end tests
+Then i style the components to made it responsive and i added some animations to make it more dynamic(Poster hover).
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## What was required
 
-## Further help
+- Te registres en algún servicio online donde puedas realizar llamadas a un API de películas. Por ejemplo puedes utilizar The Movie Database (https://www.themoviedb.org/documentation/api) o The Open Movie Database (https://www.omdbapi.com).
+- Utilizando los servicios de dicho API crees una pequeña interfaz con dos pantallas: Listado de Películas y Detalle de Película.
+- El listado de películas mostraría simplemente el nombre de las películas de una búsqueda basada en un cuadro de texto donde el usuario pueda introducir el texto de búsqueda del nombre de la película.
+- Desde el listado de películas (que sólo son los nombres) al seleccionar una se mostraría el detalle de la misma: nombre, fecha, idioma, descripción y cualquier otro campo que quieras adicionalmente.
+- Este ejercicio nos gustaría poder verlo publicado, además, en GitHub (hazlo de forma pública y así podemos revisarlo desde Okode).
+- El framework de desarrollo en frontal debe ser Angular en sus últimas versiones
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
